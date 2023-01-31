@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 8 JS</title>
+</head>
+<body>
+    
+
+    <script>
+        let listaCompras = ['Sem cadastro', 'Leite', 'Ovo', 'Farinha', 'Milho', 'Café']
+
+        let escolhaCliente = prompt('De 1 a 5, escolha um produto: ');
+        let i = Number(escolhaCliente);
+
+        if (escolhaCliente >= 1 && escolhaCliente <=5) {
+            alert (`Usuário digitou ${escolhaCliente}, "${listaCompras[i]}"`)
+        } else {
+            let incluirNovo = prompt(`O produto escolhido é ${listaCompras[0]}. Digite o nome do novo produto para adicionar a lista. Se não quiser, clique em cancelar.`)
+                if (incluirNovo != null) {
+                    listaCompras.push(incluirNovo);
+                    alert(`O ${incluirNovo} foi adicionado a lista na posição ${listaCompras.length-1}`)
+                } else {
+                    alert(`Obrigado pela visita.`)
+                }
+        }
+    </script>
+</body>
+</html>
